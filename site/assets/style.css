@@ -175,3 +175,9 @@ thead th{background:var(--green);color:var(--ivory);font-weight:600}
 .frame :focus-visible,.hero :focus-visible,.ticker :focus-visible,.site-footer :focus-visible{outline-color:#fff}
 .card:focus-visible{outline:2px solid #fff;outline-offset:-4px}
 .scroller:focus-visible{outline:2px solid var(--blue);outline-offset:4px}
+
+/* about panel: three equal, aligned columns */
+.about-cols{grid-template-columns:repeat(3,1fr);gap:2rem;align-items:start}
+.about-cols .about-item h2{border-top:1px solid var(--blue-light);padding-top:.6rem}
+.hero-about h1{max-width:34ch}
+@media(max-width:760px){.about-cols{grid-template-columns:1fr;gap:1.2rem}}

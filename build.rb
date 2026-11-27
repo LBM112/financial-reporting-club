@@ -230,20 +230,17 @@ end
 featured, *rest = posts
 # About panel shown on the homepage (placeholder text: edit freely)
 ABOUT = {
-  'What we are' => 'The Financial Reporting Club is an independently-run student club that goes into depth about insightful financial transactions, deals, and trends, and how they are priced and reported.',
-  'What we write about' => 'We aim to simplify the complex nature of financial transactions, and make them readable to a wider audience, while also making judgements on the viability and reasonability of transactions.',
-  'The nature of the club' => 'We are an open club, where anybody is welcome. If you are a reader, you are a member, and anybody is encouraged to get involved. We do not give investment advice and do not encourage financial decision making based on judgements in articles.'
+  'What we are' => 'The Financial Reporting Club is an independently run student club that looks in depth at financial transactions, deals and trends, and at how they are priced and reported.',
+  'What we write about' => 'We simplify complex financial transactions and make them readable for a wider audience, while judging how viable and reasonable each transaction was.',
+  'The nature of the club' => 'We are an open club and anybody is welcome. If you are a reader, you are a member, and everyone is encouraged to get involved. We do not give investment advice, and our articles should not be used to make financial decisions.'
 }
 
 hero = <<~HTML
   <div><section class="hero hero-about">
     <p class="eyebrow">About the Club</p>
-    <h1>Reporting on the financial world around us</h1>
+    <h1>Reports on the Complex Transactions in Corporate History</h1>
     <div class="about-cols">
-      <div class="about-lead-wrap about-item"><h2>#{CGI.escapeHTML(ABOUT.keys.first)}</h2><p class="about-lead">#{CGI.escapeHTML(ABOUT.values.first)}</p></div>
-      <div class="about-list">
-        #{ABOUT.drop(1).map { |h, t| %(<div class="about-item"><h2>#{CGI.escapeHTML(h)}</h2><p>#{CGI.escapeHTML(t)}</p></div>) }.join}
-      </div>
+      #{ABOUT.map { |h, t| %(<div class="about-item"><h2>#{CGI.escapeHTML(h)}</h2><p>#{CGI.escapeHTML(t)}</p></div>) }.join}
     </div>
     <a class="pill pill-white" href="join.html">Join the Club</a>
   </section></div>
