@@ -18,39 +18,39 @@ SITE = {
   socials: { 'Instagram' => 'https://www.instagram.com/dufinancialreportingclub/' }
 }
 
-# Sample ticker data (static placeholders, NOT live prices). Edit freely.
+# Ticker data: a static snapshot of market prices (27 Nov 2026), NOT live. Re-fetch and edit to refresh.
 # [symbol, company, sector, logo file in assets/logos, price, change]
 TICKER = [
-  ['JPM',   'JPMorgan',          'Banking',            'jpm.svg',   '212.40',  1.25],
-  ['GS',    'Goldman Sachs',     'Investment banking', 'gs.svg',    '498.15', -3.40],
-  ['BLK',   'BlackRock',         'Asset management',   'blk.svg',   '842.70',  5.10],
-  ['V',     'Visa',              'Payments',           'v.svg',     '276.55',  0.85],
-  ['AAPL',  'Apple',             'Electronics',        'aapl.svg',  '189.30', -1.10],
-  ['MSFT',  'Microsoft',         'Software',           'msft.svg',  '378.90',  2.65],
-  ['NVDA',  'Nvidia',            'Semiconductors',     'nvda.svg',  '495.20', 12.30],
-  ['GOOGL', 'Alphabet',          'Internet',           'googl.svg', '139.60',  1.05],
-  ['VZ',    'Verizon',           'Telecoms',           'vz.svg',    '38.45',  -0.30],
-  ['PFE',   'Pfizer',            'Pharmaceuticals',    'pfe.svg',   '28.75',  -0.15],
-  ['UNH',   'UnitedHealth',      'Healthcare',         'unh.svg',   '528.40',  4.20],
-  ['DAL',   'Delta',             'Airlines',           'dal.svg',   '41.20',   0.90],
-  ['BA',    'Boeing',            'Aerospace',          'ba.svg',    '207.85', -2.75],
-  ['TM',    'Toyota',            'Automotive',         'tm.svg',    '181.60',  1.40],
-  ['FDX',   'FedEx',             'Logistics',          'fdx.svg',   '256.30',  3.15],
-  ['UNP',   'Union Pacific',     'Railways',           'unp.svg',   '236.90', -1.60],
-  ['XOM',   'ExxonMobil',        'Oil and gas',        'xom.svg',   '104.75',  0.55],
-  ['NEE',   'NextEra',           'Utilities',          'nee.svg',   '58.20',  -0.45],
-  ['CAT',   'Caterpillar',       'Machinery',          'cat.svg',   '291.10',  4.80],
-  ['BHP',   'BHP',               'Mining',             'bhp.svg',   '57.85',  -0.70],
-  ['LIN',   'Linde',             'Chemicals',          'lin.png',   '405.60',  2.30],
-  ['WMT',   'Walmart',           'Retail',             'wmt.svg',   '163.40',  0.65],
-  ['AMZN',  'Amazon',            'E-commerce',         'amzn.svg',  '147.25',  2.05],
-  ['KO',    'Coca-Cola',         'Beverages',          'ko.svg',    '59.30',  -0.20],
-  ['PG',    'Procter & Gamble',  'Consumer goods',     'pg.svg',    '152.80',  0.75],
-  ['NKE',   'Nike',              'Sportswear',         'nke.svg',   '107.45', -1.35],
-  ['MCD',   "McDonald's",        'Restaurants',        'mcd.svg',   '281.70',  1.95],
-  ['DIS',   'Disney',            'Entertainment',      'dis.svg',   '91.15',   1.10],
-  ['MAR',   'Marriott',          'Hospitality',        'mar.svg',   '219.50',  2.85],
-  ['PLD',   'Prologis',          'Real estate',        'pld.svg',   '124.65', -0.90]
+  ['JPM',   'JPMorgan',          'Banking',            'jpm.svg',   '324.14', 7.40],
+  ['GS',    'Goldman Sachs',     'Investment banking', 'gs.svg',    '815.18', 14.15],
+  ['BLK',   'BlackRock',         'Asset management',   'blk.svg',   '1,167.73', 25.87],
+  ['V',     'Visa',              'Payments',           'v.svg',     '430.56', 6.16],
+  ['AAPL',  'Apple',             'Electronics',        'aapl.svg',  '357.52', 1.94],
+  ['MSFT',  'Microsoft',         'Software',           'msft.svg',  '490.99', 1.06],
+  ['NVDA',  'Nvidia',            'Semiconductors',     'nvda.svg',  '149.18', -0.12],
+  ['GOOGL', 'Alphabet',          'Internet',           'googl.svg', '273.72', 0.62],
+  ['VZ',    'Verizon',           'Telecoms',           'vz.svg',    '47.72', 0.44],
+  ['PFE',   'Pfizer',            'Pharmaceuticals',    'pfe.svg',   '28.50', 0.04],
+  ['UNH',   'UnitedHealth',      'Healthcare',         'unh.svg',   '352.20', 6.01],
+  ['DAL',   'Delta',             'Airlines',           'dal.svg',   '85.02', 2.08],
+  ['BA',    'Boeing',            'Aerospace',          'ba.svg',    '167.46', 2.93],
+  ['TM',    'Toyota',            'Automotive',         'tm.svg',    '214.60', -1.20],
+  ['FDX',   'FedEx',             'Logistics',          'fdx.svg',   '310.47', 1.60],
+  ['UNP',   'Union Pacific',     'Railways',           'unp.svg',   '297.43', -0.95],
+  ['XOM',   'ExxonMobil',        'Oil and gas',        'xom.svg',   '160.64', 2.56],
+  ['NEE',   'NextEra',           'Utilities',          'nee.svg',   '84.94', 0.15],
+  ['CAT',   'Caterpillar',       'Machinery',          'cat.svg',   '562.53', 18.84],
+  ['BHP',   'BHP',               'Mining',             'bhp.svg',   '73.34', 2.57],
+  ['LIN',   'Linde',             'Chemicals',          'lin.png',   '530.75', 6.14],
+  ['WMT',   'Walmart',           'Retail',             'wmt.svg',   '132.11', 0.17],
+  ['AMZN',  'Amazon',            'E-commerce',         'amzn.svg',  '254.06', 9.63],
+  ['KO',    'Coca-Cola',         'Beverages',          'ko.svg',    '97.40', -0.18],
+  ['PG',    'Procter & Gamble',  'Consumer goods',     'pg.svg',    '172.55', -0.68],
+  ['NKE',   'Nike',              'Sportswear',         'nke.svg',   '37.17', 0.51],
+  ['MCD',   "McDonald's",        'Restaurants',        'mcd.svg',   '282.08', -1.42],
+  ['DIS',   'Disney',            'Entertainment',      'dis.svg',   '127.00', 1.40],
+  ['MAR',   'Marriott',          'Hospitality',        'mar.svg',   '417.77', 2.00],
+  ['PLD',   'Prologis',          'Real estate',        'pld.svg',   '127.00', -0.03]
 ]
 
 # ---------- tiny Markdown converter ----------
@@ -165,7 +165,7 @@ def page(title, body, depth: 0, active: nil, hero: '')
     num = format('%.2f', chg.abs)
     %(<span class="tick" title="#{CGI.escapeHTML(company)} · #{CGI.escapeHTML(sector)}"><span class="logo-chip"><img src="#{up}assets/logos/#{logo}" alt=""></span><span class="t-sym">#{sym}</span><span class="t-name">#{CGI.escapeHTML(company)}</span><span class="t-price">#{price}</span><span class="t-chg #{rising ? 'up' : 'down'}"><b>#{rising ? '&#9650;' : '&#9660;'}</b>#{num}</span></span>)
   end.join
-  announce = %(<div class="ticker" role="region" aria-label="Sample market ticker (not live prices)"><div class="ticker-track" style="animation-duration:#{TICKER.size * 4}s"><div class="ticker-set">#{items}</div><div class="ticker-set" aria-hidden="true">#{items}</div></div></div>)
+  announce = %(<div class="ticker" role="region" aria-label="Market ticker: prices as of 27 Nov 2026, not live"><div class="ticker-track" style="animation-duration:#{TICKER.size * 4}s"><div class="ticker-set">#{items}</div><div class="ticker-set" aria-hidden="true">#{items}</div></div></div>)
   <<~HTML
     <!doctype html>
     <html lang="en">
