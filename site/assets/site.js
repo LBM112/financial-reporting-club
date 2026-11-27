@@ -22,7 +22,7 @@ document.querySelectorAll('.author-row').forEach(function (row) {
 
 // Make the landing panel exactly fill the screen below the ticker and nav bar
 (function () {
-  var hero = document.querySelector('.hero-about:not(.hero-join)');
+  var hero = document.querySelector('.hero-about');
   if (!hero) return;
   function fit() {
     var top = 0;
