@@ -182,7 +182,7 @@ def page(title, body, depth: 0, active: nil, hero: '')
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="#{up}assets/style.css?v=#{BUILD_ID}">
     </head>
-    <body>
+    <body#{active == 'home' ? ' class="dark"' : ''}>
     #{announce}
       <div class="frame">
         <header class="site-header">

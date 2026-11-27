@@ -19,3 +19,20 @@ document.querySelectorAll('.author-row').forEach(function (row) {
   }, { threshold: 0.15 });
   els.forEach(function (el) { io.observe(el); });
 })();
+
+// Make the landing panel exactly fill the screen below the ticker and nav bar
+(function () {
+  var hero = document.querySelector('.hero-about:not(.hero-join)');
+  if (!hero) return;
+  function fit() {
+    var top = 0;
+    ['.ticker', '.site-header'].forEach(function (s) {
+      var el = document.querySelector(s);
+      if (el) top += el.offsetHeight;
+    });
+    hero.style.setProperty('--hero-h', Math.max(window.innerHeight - top, 420) + 'px');
+  }
+  fit();
+  window.addEventListener('resize', fit);
+  window.addEventListener('load', fit);
+})();
