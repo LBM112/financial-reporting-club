@@ -1,7 +1,7 @@
 ---
 title: The Enron-Rhythms NetConnections Deal, Enron’s Insurance Against Itself
 author: Luca Basturkmen Massa
-date: 2026-11-23
+date: 2026-11-27
 summary: Would you bet on yourself that Haaland will score 9 goals for two games in a row?
 ---
 
