@@ -1,0 +1,10 @@
+# Publish only the site source and its built output. Ignore everything else.
+/*
+!/.gitignore
+!/build.rb
+!/vercel.json
+!/README.md
+!/posts
+!/assets
+!/site
+.DS_Store
