@@ -14,8 +14,8 @@ OUT  = File.join(ROOT, 'site')
 SITE = {
   name: 'Financial Reporting Club',
   tagline: 'Plain-English analysis of the deals that move markets.',
-  email: 'hello@example.com',          # <-- replace with your real email
-  socials: { 'Instagram' => 'https://instagram.com/' } # <-- replace with your Instagram page
+  email: 'dufinancialreportingclub@yahoo.com',
+  socials: { 'Instagram' => 'https://www.instagram.com/dufinancialreportingclub/' }
 }
 
 # Sample ticker data (static placeholders, NOT live prices). Edit freely.
