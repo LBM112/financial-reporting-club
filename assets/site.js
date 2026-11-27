@@ -7,3 +7,15 @@ document.querySelectorAll('.author-row').forEach(function (row) {
     });
   });
 });
+
+// Scroll animation: plays each time an element enters the viewport (and resets when it leaves)
+(function () {
+  var els = document.querySelectorAll('.reveal');
+  if (!els.length || !('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js-reveal');
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { e.target.classList.toggle('in-view', e.isIntersecting); });
+  }, { threshold: 0.15 });
+  els.forEach(function (el) { io.observe(el); });
+})();

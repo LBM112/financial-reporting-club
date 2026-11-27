@@ -181,3 +181,16 @@ thead th{background:var(--green);color:var(--ivory);font-weight:600}
 .about-cols .about-item h2{border-top:1px solid var(--blue-light);padding-top:.6rem}
 .hero-about h1{max-width:34ch}
 @media(max-width:760px){.about-cols{grid-template-columns:1fr;gap:1.2rem}}
+
+/* logo beside the wordmark */
+.brand{display:inline-flex;align-items:center;gap:.8rem}
+.brand-logo{height:2.6rem;width:2.6rem;border-radius:2px;flex:none;display:block}
+
+/* landing photo stays still while the text scrolls over it */
+.hero-about:not(.hero-join){background-attachment:fixed,fixed}
+
+/* blogs section: animation replays every time it scrolls into view */
+.js-reveal .reveal{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s ease}
+.js-reveal .reveal.in-view{opacity:1;transform:none}
+.js-reveal .card.reveal{transition-delay:.12s}
+@media (prefers-reduced-motion:reduce){.js-reveal .reveal{opacity:1;transform:none;transition:none}}

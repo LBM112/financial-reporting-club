@@ -187,7 +187,7 @@ def page(title, body, depth: 0, active: nil, hero: '')
       <div class="frame">
         <header class="site-header">
           <a class="brand" href="#{up}index.html" aria-label="Financial Reporting Club, home">
-            <span class="wordmark"><span class="wm-top">Financial Reporting</span><span class="wm-bottom">Club</span></span>
+            <img class="brand-logo" src="#{up}assets/logo.svg" alt="" width="44" height="44"><span class="wordmark"><span class="wm-top">Financial Reporting</span><span class="wm-bottom">Club</span></span>
           </a>
           <nav class="main-nav">#{nav}</nav>
         </header>
@@ -246,12 +246,12 @@ hero = <<~HTML
   </section></div>
 HTML
 
-home = +'<div class="wrap wide blogs-area"><h2 class="section-title" id="blogs">Blogs by author</h2>'
+home = +'<div class="wrap wide blogs-area"><h2 class="section-title reveal" id="blogs">Blogs by author</h2>'
 posts.group_by { |p| p[:author] }.each do |author, list|
-  home << %(<section class="author-row"><div class="author-head"><h3>#{CGI.escapeHTML(author)}</h3><div class="scroll-btns"><button type="button" class="scroll-btn" data-dir="-1" aria-label="Scroll left">&larr;</button><button type="button" class="scroll-btn" data-dir="1" aria-label="Scroll right">&rarr;</button></div></div><div class="scroller" tabindex="0" role="region" aria-label="Articles by #{CGI.escapeHTML(author)}">)
+  home << %(<section class="author-row reveal"><div class="author-head"><h3>#{CGI.escapeHTML(author)}</h3><div class="scroll-btns"><button type="button" class="scroll-btn" data-dir="-1" aria-label="Scroll left">&larr;</button><button type="button" class="scroll-btn" data-dir="1" aria-label="Scroll right">&rarr;</button></div></div><div class="scroller" tabindex="0" role="region" aria-label="Articles by #{CGI.escapeHTML(author)}">)
   list.each do |p|
     home << <<~HTML
-      <a class="card" href="posts/#{p[:slug]}.html">
+      <a class="card reveal" href="posts/#{p[:slug]}.html">
         <img src="assets/images/glass-towers.png" alt="" loading="lazy">
         <div class="card-body">
           <h4>#{CGI.escapeHTML(p[:title])}</h4>
@@ -277,7 +277,7 @@ join_hero = <<~HTML
       <div class="about-item"><h2>Follow us</h2><p>#{SITE[:socials].map { |n, u| %(<a href="#{u}">#{n}</a>) }.join(', ')}</p></div>
       <div class="about-item"><h2>Questions or ideas</h2><p>For questions or ideas, email us at <a href="mailto:#{SITE[:email]}">#{SITE[:email]}</a>.</p></div>
     </div>
-    <p class="hero-credit">Ernst &amp; Young and Westpac offices, Auckland &middot; Photo credit: Patrick Reynolds (placeholder, confirm before publishing)</p>
+    <p class="hero-credit">Ernst &amp; Young and Westpac offices, Auckland</p>
   </section></div>
 HTML
 File.write(File.join(OUT, 'join.html'), page('Join the Club', '', active: 'join', hero: join_hero))
