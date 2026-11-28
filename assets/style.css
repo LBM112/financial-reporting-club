@@ -202,3 +202,11 @@ thead th{background:var(--green);color:var(--ivory);font-weight:600}
 body.dark{background:#0a0c10;color:#e8ebf1}
 .hero-about{min-height:calc(100vh - 7.5rem);min-height:var(--hero-h,calc(100vh - 7.5rem));justify-content:center}
 .hero-about.hero-join{background-attachment:fixed,fixed}
+
+/* article subtitle and jump links */
+.post-subtitle{font-size:1.25rem;line-height:1.5;font-style:italic;color:var(--muted);margin:.2rem 0 1rem;max-width:60ch}
+.prose .jump{margin:1.2rem 0}
+.prose .jump a{display:inline-block;font-family:var(--sans);font-size:.9rem;font-weight:600;color:var(--blue);border:1px solid var(--blue);padding:.45rem .9rem;border-radius:2px;text-decoration:none}
+.prose .jump a:hover{background:var(--blue);color:#fff}
+.prose sup{font-size:.7em;line-height:0}
+#title,#definitions{scroll-margin-top:1rem}

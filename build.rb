@@ -60,7 +60,8 @@ def inline(s)
   s = s.gsub(/\[([^\]]+)\]\(([^)]+)\)/, '<a href="\2">\1</a>')
   s = s.gsub(/\*\*(.+?)\*\*/, '<strong>\1</strong>')
   s = s.gsub(/(?<![\w*])\*(?!\s)(.+?)\*(?!\w)/, '<em>\1</em>')
-  s.gsub(/`([^`]+)`/, '<code>\1</code>')
+  s = s.gsub(/\^([^^\s][^^]*?)\^/, '<sup>\\1</sup>')
+  s.gsub(/`([^`]+)`/, '<code></code>')
 end
 
 def markdown(text)
@@ -145,8 +146,9 @@ def load_post(path)
     author: meta['author'] || 'FRS Editorial',
     date: Date.parse(meta['date'] || File.mtime(path).to_s),
     summary: meta['summary'] || '',
+    subtitle: meta['subtitle'],
     minutes: [(words / 200.0).ceil, 1].max,
-    html: markdown(body)
+    html: markdown(body).sub('<h3>Definitions</h3>', '<h3 id="definitions">Definitions</h3>').gsub(/<p><a href="(#(?:title|definitions))">(.*?)<\/a><\/p>/, '<p class="jump"><a href="\\1">\\2</a></p>')
   }
 end
 
@@ -217,8 +219,8 @@ posts.each do |p|
     <figure class="banner banner-post"><img src="../assets/images/glass-towers.png" alt=""></figure>
     <article class="wrap post">
       <p class="back"><a href="../index.html">&larr; All articles</a></p>
-      <h1>#{CGI.escapeHTML(p[:title])}</h1>
-      <p class="byline">By <strong>#{CGI.escapeHTML(p[:author])}</strong> <span>&middot;</span> #{fmt(p[:date])} <span>&middot;</span> #{p[:minutes]} min read#{p[:html].include?('id="bottom-line"') ? ' <span>&middot;</span> <a class="skip" href="#bottom-line">Jump to the bottom line &darr;</a>' : ''}</p>
+      <h1 id="title">#{CGI.escapeHTML(p[:title])}</h1>
+#{p[:subtitle] ? %(      <p class="post-subtitle">“#{CGI.escapeHTML(p[:subtitle])}”</p>\n) : ''}      <p class="byline">By <strong>#{CGI.escapeHTML(p[:author])}</strong> <span>&middot;</span> #{fmt(p[:date])} <span>&middot;</span> #{p[:minutes]} min read#{p[:html].include?('id="bottom-line"') ? ' <span>&middot;</span> <a class="skip" href="#bottom-line">Jump to the bottom line &darr;</a>' : ''}</p>
       <div class="prose">
     #{p[:html]}
       </div>
