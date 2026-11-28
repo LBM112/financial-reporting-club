@@ -2,7 +2,7 @@
 title: The Enron-Rhythms NetConnections Deal, Enron’s Insurance Against Itself
 author: Luca Basturkmen Massa
 date: 2026-11-27
-summary: Would you bet on yourself that Haaland will score 9 goals for two games in a row?
+summary: What if you bet on Haaland scoring 9 goals in each of two consecutive games, and wanted to sell the bet after he scored 9 in the first game?
 ---
 
 *Definitions At Bottom*

@@ -246,7 +246,7 @@ hero = <<~HTML
   </section></div>
 HTML
 
-home = +'<div class="wrap wide blogs-area"><h2 class="section-title reveal" id="blogs">Blogs by author</h2>'
+home = +'<div class="wrap wide blogs-area"><h2 class="section-title reveal" id="blogs">Articles by author</h2>'
 posts.group_by { |p| p[:author] }.each do |author, list|
   home << %(<section class="author-row reveal"><div class="author-head"><h3>#{CGI.escapeHTML(author)}</h3><div class="scroll-btns"><button type="button" class="scroll-btn" data-dir="-1" aria-label="Scroll left">&larr;</button><button type="button" class="scroll-btn" data-dir="1" aria-label="Scroll right">&rarr;</button></div></div><div class="scroller" tabindex="0" role="region" aria-label="Articles by #{CGI.escapeHTML(author)}">)
   list.each do |p|
